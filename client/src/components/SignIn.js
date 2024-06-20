@@ -24,8 +24,8 @@ const SignIn = ({ setIsAuthenticated, setUser, setRole }) => {
 
             if (data.token) {
                 // Store the token and username in local storage and update authentication state
-                localStorage.setItem('token', data.token);
-                localStorage.setItem('username', username);
+                sessionStorage.setItem('token', data.token);
+                sessionStorage.setItem('username', username);
                 setIsAuthenticated(true);
                 setUser(data.username);
                 setRole(data.role);

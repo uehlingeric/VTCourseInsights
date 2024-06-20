@@ -19,8 +19,8 @@ function App() {
   const [role, setRole] = useState('');
 
   const handleSignOut = () => {
-    localStorage.removeItem('token'); // Clear token from storage
-    localStorage.removeItem('username'); // Clear username from storage
+    sessionStorage.removeItem('token'); // Clear token from storage
+    sessionStorage.removeItem('username'); // Clear username from storage
     setIsAuthenticated(false);
     setUser(''); // Clear username
     setRole(''); // Clear role
